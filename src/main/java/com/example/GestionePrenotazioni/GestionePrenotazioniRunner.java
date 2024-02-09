@@ -44,7 +44,9 @@ public class GestionePrenotazioniRunner implements CommandLineRunner {
 
         Prenotazione prenotazione1 = new Prenotazione(utente1, postazione1, LocalDate.now());
         prenotazioneSRV.save(prenotazione1);
+        Prenotazione prenotazione2 = new Prenotazione(utente1, postazione1, LocalDate.now());
+        prenotazioneSRV.save(prenotazione2);
+        // Prenotazione 2 non verrà effettuata perchè gia esiste una prenotazione dell'utente in quello stesso giorno
 
-        
     }
 }
