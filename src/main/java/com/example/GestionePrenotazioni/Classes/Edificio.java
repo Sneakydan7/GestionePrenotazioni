@@ -2,11 +2,15 @@ package com.example.GestionePrenotazioni.Classes;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
+@ToString
+@NoArgsConstructor
 public class Edificio {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -19,5 +23,9 @@ public class Edificio {
 
     private String citta;
 
-
+    public Edificio(String nomeEdificio, String indirizzo, String citta) {
+        this.nomeEdificio = nomeEdificio;
+        this.indirizzo = indirizzo;
+        this.citta = citta;
+    }
 }
