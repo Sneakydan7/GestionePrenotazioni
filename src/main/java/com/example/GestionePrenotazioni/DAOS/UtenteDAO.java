@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UtenteDAO extends JpaRepository<Utente,Long> {
-
+public interface UtenteDAO extends JpaRepository<Utente, Long> {
+    Utente findByUsername(String username);
 
 
 }

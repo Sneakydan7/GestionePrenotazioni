@@ -43,7 +43,8 @@ public class GestionePrenotazioniRunner implements CommandLineRunner {
         postazioneSRV.save(postazione1);
 
         Prenotazione prenotazione1 = new Prenotazione(utente1, postazione1, LocalDate.now());
+        prenotazioneSRV.save(prenotazione1);
 
-
+        
     }
 }
